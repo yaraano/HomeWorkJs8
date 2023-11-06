@@ -40,14 +40,15 @@ btnDelete.addEventListener( 'click' , () => {
     }
 })
 
-btnMulti.addEventListener( 'click' , () => {
-    if (res2.innerText > 100) {
-        res2.innerText = Number(res2.innerText) * Number(res1.innerText)
-    } else{
-        alert.classList.add("show")
-        alert.classList.remove("alert")
+btnMulti.addEventListener('click', () => {
+    const result = Number(res2.innerText) * Number(res1.innerText);
+    if (result < 101) {
+        res2.innerText = result;
+    } else {
+        alert.classList.add("show");
+        alert.classList.remove("alert");
     }
-})
+});
 
 btn1.addEventListener('click',()=>{
     res1.innerText=1
